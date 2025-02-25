@@ -65,7 +65,7 @@ function CreateOrder() {
 
         <div>
           <input type="checkbox" name="priority" id="priority" />
-          <label htmlFor="priority">Want to yo give your order priority?</label>
+          <label htmlFor="priority">Want to give your order priority?</label>
         </div>
 
         <div>
