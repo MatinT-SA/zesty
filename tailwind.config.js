@@ -10,6 +10,9 @@ export default {
       height: {
         screen: "100dvh",
       },
+      colors: {
+        customOrange: "#FF9131",
+      },
     },
   },
   plugins: [],

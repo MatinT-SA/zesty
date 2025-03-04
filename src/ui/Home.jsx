@@ -10,7 +10,7 @@ function Home() {
       <h1 className="text-semibold mb-8 text-center text-xl text-stone-700 md:text-3xl">
         The best pizza.
         <br />
-        <span className="text-yellow-500">
+        <span className="text-customOrange">
           Straight out of the oven, straight to you.
         </span>
       </h1>

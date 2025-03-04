@@ -1,10 +1,19 @@
+/* 
+  Color Palette
+
+  customOrange: #FF9131
+  custommLightOrange: rgba(255, 145, 49, 0.7)
+  customLight: #FEFEFE
+  customGray: #F6F5EF
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
   .input {
-    @apply rounded-full border border-stone-200 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-400 md:px-6 md:py-3;
+    @apply focus:ring-customOrange rounded-full border border-stone-200 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring md:px-6 md:py-3;
   }
 
   .loader {
