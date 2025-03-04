@@ -46,3 +46,10 @@
     }
   }
 }
+
+/* Responsiveness */
+@media (min-width: 1800px) {
+  html {
+    font-size: 130%;
+  }
+}
