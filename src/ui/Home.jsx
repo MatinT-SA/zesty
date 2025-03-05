@@ -7,13 +7,10 @@ function Home() {
   const username = useSelector((state) => state.user.username);
 
   return (
-    <div className="my-10 px-4 text-center sm:my-16">
-      <h1 className="text-semibold mb-8 text-center text-xl text-stone-700 md:text-3xl">
-        The best pizza.
-        <br />
-        <span className="text-customOrange">
-          Straight out of the oven, straight to you.
-        </span>
+    <div className="my-10 px-4 text-center sm:my-2">
+      <h1 className="text-semibold mb-3 text-center text-xl text-stone-700 md:text-3xl">
+        🍕 Freshy Baked Pizza{" "}
+        <span className="text-customOrange">Delivered Just for You</span>
       </h1>
 
       {username === "" ? (
@@ -24,7 +21,7 @@ function Home() {
         </Button>
       )}
 
-      <div className="flex h-[500px] items-center justify-center">
+      <div className="mt-1 flex h-[29rem] items-center justify-center">
         <PizzaScene />
       </div>
     </div>

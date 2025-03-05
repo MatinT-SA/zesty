@@ -19,23 +19,25 @@ function CreateUser() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p className="mb-4 text-sm text-stone-600 md:text-base">
-        👋 Welcome! Please start by telling us your name:
+      <p className="mb-3 text-sm text-stone-600 md:text-base">
+        Hi there! Let’s start with your name:
       </p>
 
-      <input
-        type="text"
-        placeholder="Your full name"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        className="input mb-8 w-72"
-      />
+      <div className="flex items-baseline justify-center gap-5">
+        <input
+          type="text"
+          placeholder="Your full name"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="input mb-3 w-72 py-[.75rem]"
+        />
 
-      {username !== "" && (
-        <div>
-          <Button type="primary">Start ordering</Button>
-        </div>
-      )}
+        {username !== "" && (
+          <div>
+            <Button type="primary">Start ordering</Button>
+          </div>
+        )}
+      </div>
     </form>
   );
 }

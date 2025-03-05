@@ -1,17 +1,17 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useGLTF } from "@react-three/drei";
 
 function Pizza(props) {
   const { nodes, materials } = useGLTF("/3d/pizza.glb");
 
   return (
-    <group {...props} dispose={null} scale={[15, 15, 15]}>
+    <group {...props} dispose={null} scale={[13, 13, 13]}>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Object_2.geometry}
         material={materials.material_1}
-        rotation={[-Math.PI / 4, 5.8, 3.5]}
+        rotation={[-Math.PI / 4.8, 5.9, 3.5]}
       />
     </group>
   );
