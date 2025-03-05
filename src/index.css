@@ -61,4 +61,8 @@
   html {
     font-size: 130%;
   }
+
+  .pizza {
+    height: 40rem !important;
+  }
 }
