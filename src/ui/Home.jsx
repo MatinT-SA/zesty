@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import CreateUser from "../features/user/CreateUser";
 import Button from "./Button";
+import PizzaScene from "./PizzaScene";
 
 function Home() {
   const username = useSelector((state) => state.user.username);
@@ -22,6 +23,10 @@ function Home() {
           Continue ordering, Matin
         </Button>
       )}
+
+      <div className="flex h-[500px] items-center justify-center">
+        <PizzaScene />
+      </div>
     </div>
   );
 }
