@@ -8,7 +8,7 @@ function Pizza(props) {
 
   useFrame(() => {
     if (pizzaRef.current) {
-      pizzaRef.current.rotation.z += 0.004;
+      pizzaRef.current.rotation.z += 0.002;
     }
   });
 
