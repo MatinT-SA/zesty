@@ -38,11 +38,13 @@ function CreateOrder() {
 
   return (
     <div className="px-4 py-6">
-      <h2 className="mb-8 text-xl font-semibold">Ready to order? Let's go!</h2>
+      <h2 className="mb-8 text-xl font-semibold">
+        Your next order is just a click away!
+      </h2>
 
       <Form method="POST">
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label className="sm:basis-40">First Name</label>
+          <label className="sm:basis-40">Your Name</label>
           <input
             type="text"
             name="customer"
@@ -53,7 +55,7 @@ function CreateOrder() {
         </div>
 
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label className="sm:basis-40">Phone number</label>
+          <label className="sm:basis-40">Phone Number</label>
           <div className="grow">
             <input type="tel" name="phone" required className="input w-full" />
             {formErrors?.phone && (
@@ -103,12 +105,12 @@ function CreateOrder() {
             type="checkbox"
             name="priority"
             id="priority"
-            className="accent-customOrange focus:ring-customOrange h-6 w-6 focus:outline-none focus:ring focus:ring-offset-2"
+            className="h-6 w-6 accent-customOrange focus:outline-none focus:ring focus:ring-customOrange focus:ring-offset-2"
             value={withPriority}
             onChange={(e) => setWithPriority(e.target.checked)}
           />
           <label htmlFor="priority" className="font-medium">
-            Want to give your order priority?
+            Need faster delivery?
           </label>
         </div>
 

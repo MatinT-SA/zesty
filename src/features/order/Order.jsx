@@ -39,7 +39,7 @@ function Order() {
         <div className="space-x-2">
           {priority && (
             <span className="rounded-rull rounded-full bg-red-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-red-50">
-              Priority
+              Express
             </span>
           )}
           <span className="rounded-rull rounded-full bg-green-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-green-50">
@@ -51,10 +51,10 @@ function Order() {
       <div className="flex flex-wrap items-center justify-between gap-2 bg-stone-200 px-6 py-5">
         <p className="font-medium">
           {deliveryIn >= 0
-            ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
+            ? `Delivery in ${calcMinutesLeft(estimatedDelivery)} minutes 🚀`
             : "Order should have arrived"}
         </p>
-        <p>(Estimated delivery: {formatDate(estimatedDelivery)})</p>
+        <p>✨Estimated delivery: {formatDate(estimatedDelivery)}✨</p>
       </div>
 
       <ul className="divide-y divide-stone-200 border-b border-t">
@@ -77,11 +77,11 @@ function Order() {
         </p>
         {priority && (
           <p className="text-sm font-medium text-stone-600">
-            Price priority: {formatCurrency(priorityPrice)}
+            Price express: {formatCurrency(priorityPrice)}
           </p>
         )}
         <p className="font-bold">
-          To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
+          Pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
         </p>
       </div>
 
