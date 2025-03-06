@@ -7,6 +7,18 @@
   customGray: #F6F5EF
 */
 
+.sold-out::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140%;
+  height: 4px;
+  background-color: rgba(255, 0, 0, 0.534);
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

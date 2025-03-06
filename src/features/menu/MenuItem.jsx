@@ -24,11 +24,14 @@ function MenuItem({ pizza }) {
 
   return (
     <li className="flex gap-4 py-2">
-      <img
-        src={imageUrl}
-        alt={name}
-        className={`h-24 ${soldOut ? "opacity-70 grayscale" : ""}`}
-      />
+      <div className="relative overflow-hidden">
+        <img
+          src={imageUrl}
+          alt={name}
+          className={`h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 ${soldOut ? "opacity-70 grayscale" : ""}`}
+        />
+        {soldOut && <div className="sold-out absolute inset-0"></div>}
+      </div>
       <div className="flex grow flex-col pt-0.5">
         <p className="font-medium">{name}</p>
         <p className="text-sm capitalize italic text-stone-500">
