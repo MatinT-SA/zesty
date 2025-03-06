@@ -28,7 +28,7 @@ function MenuItem({ pizza }) {
         <img
           src={imageUrl}
           alt={name}
-          className={`h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 ${soldOut ? "opacity-70 grayscale" : ""}`}
+          className={`h-20 rounded-sm sm:h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 ${soldOut ? "opacity-70 grayscale" : ""}`}
         />
         {soldOut && <div className="sold-out absolute inset-0"></div>}
       </div>
