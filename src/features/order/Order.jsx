@@ -1,6 +1,7 @@
 // Test ID: IIDSAT
 
 import { useFetcher, useLoaderData } from "react-router-dom";
+import { Sparkles, Timer, Zap } from "lucide-react";
 import { getOrder } from "../../services/apiRestaurant";
 import {
   calcMinutesLeft,
@@ -36,9 +37,10 @@ function Order() {
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="text-xl font-semibold">Order #{id}</h2>
 
-        <div className="space-x-2">
+        <div className="flex items-center justify-center space-x-2">
           {priority && (
-            <span className="rounded-rull rounded-full bg-red-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-red-50">
+            <span className="rounded-rull flex items-center justify-center gap-2 rounded-full bg-red-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-red-50">
+              <Zap className="h-4 w-4 text-stone-100" />
               Express
             </span>
           )}
@@ -49,12 +51,21 @@ function Order() {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-2 bg-stone-200 px-6 py-5">
-        <p className="font-medium">
-          {deliveryIn >= 0
-            ? `Delivery in ${calcMinutesLeft(estimatedDelivery)} minutes 🚀`
-            : "Order should have arrived"}
+        <p className="flex items-center gap-2 font-medium">
+          {deliveryIn >= 0 ? (
+            <>
+              Delivery in {calcMinutesLeft(estimatedDelivery)} minutes
+              <Timer className="h-6 w-6 text-customOrange" />
+            </>
+          ) : (
+            "Order should have arrived"
+          )}
         </p>
-        <p>✨Estimated delivery: {formatDate(estimatedDelivery)}✨</p>
+        <p className="flex items-center justify-center gap-2">
+          <Sparkles className="h-6 w-6 text-customOrange" /> Estimated delivery:{" "}
+          {formatDate(estimatedDelivery)}
+          <Sparkles className="h-6 w-6 text-customOrange" />
+        </p>
       </div>
 
       <ul className="divide-y divide-stone-200 border-b border-t">

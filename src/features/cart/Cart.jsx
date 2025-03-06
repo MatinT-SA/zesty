@@ -1,7 +1,8 @@
+import { useDispatch, useSelector } from "react-redux";
+import { ChevronsLeft } from "lucide-react";
 import LinkButton from "../../ui/LinkButton";
 import Button from "../../ui/Button";
 import CartItem from "./CartItem";
-import { useDispatch, useSelector } from "react-redux";
 import { getUsername } from "../user/userSlice";
 import { clearCart, getCart } from "./cartSlice";
 import EmptyCart from "./EmptyCart";
@@ -19,7 +20,9 @@ function Cart() {
 
   return (
     <div className="px-3 py-4">
-      <LinkButton to="/menu">&larr; Back to menu</LinkButton>
+      <LinkButton to="/menu">
+        <ChevronsLeft className="h-6 w-6 text-blue-500" /> Back to menu
+      </LinkButton>
 
       <h2 className="mt-7 text-xl font-semibold">Your cart, {username}</h2>
 

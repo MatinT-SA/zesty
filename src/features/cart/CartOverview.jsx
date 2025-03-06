@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Utensils } from "lucide-react";
 import { getTotalCartPrice, getTotalCartQuantity } from "./cartSlice";
 import { formatCurrency } from "../../utils/helpers";
 
@@ -15,7 +16,9 @@ function CartOverview() {
         <span>{totalCartQuantity} pizzas</span>
         <span>{formatCurrency(totalCartPrice)}</span>
       </p>
-      <Link to="/cart">Open cart &rarr;</Link>
+      <Link to="/cart" className="flex items-center justify-center gap-2">
+        Open cart <Utensils className="h-6 w-6 text-stone-300" />
+      </Link>
     </div>
   );
 }
