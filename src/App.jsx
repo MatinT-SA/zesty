@@ -22,24 +22,24 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/zesty/menu",
+        path: "/menu",
         element: <Menu />,
         loader: menuLoader,
         errorElement: <Error />,
       },
       {
-        path: "/zesty/cart",
+        path: "/cart",
         element: <Cart />,
       },
       {
-        path: "/zesty/order/:orderId",
+        path: "/order/:orderId",
         element: <Order />,
         loader: orderLoader,
         errorElement: <Error />,
         action: updateOrderAction,
       },
       {
-        path: "/zesty/order/new",
+        path: "/order/new",
         element: <CreateOrder />,
         action: actionCreateOrder,
       },
