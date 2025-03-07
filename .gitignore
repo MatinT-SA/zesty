@@ -23,5 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# Ignore 3D models
-/public/3d/
