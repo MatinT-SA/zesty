@@ -3,9 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 function Pizza(props) {
-  const { nodes, materials } = useGLTF(
-    "https://www.dropbox.com/scl/fi/1fk1d8soh9p5txbldn42r/pizza.glb?rlkey=rz9kcgutmioiot9pz1dt85llq&st=lgjnwit5&dl=1",
-  );
+  const { nodes, materials } = useGLTF("/3d/pizza.glb");
   const pizzaRef = useRef();
 
   useFrame(() => {
@@ -28,8 +26,6 @@ function Pizza(props) {
   );
 }
 
-useGLTF.preload(
-  "https://www.dropbox.com/scl/fi/1fk1d8soh9p5txbldn42r/pizza.glb?rlkey=rz9kcgutmioiot9pz1dt85llq&st=lgjnwit5&dl=1",
-);
+useGLTF.preload("/3d/pizza.glb");
 
 export default Pizza;
