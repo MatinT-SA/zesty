@@ -35,7 +35,9 @@ function Order() {
   return (
     <div className="space-y-8 px-4 py-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-xl font-semibold">Order #{id}</h2>
+        <h2 className="text-xl font-semibold">
+          Order # <span className="text-customOrange">{id}</span>
+        </h2>
 
         <div className="flex items-center justify-center space-x-2">
           {priority && (
@@ -44,7 +46,7 @@ function Order() {
               Express
             </span>
           )}
-          <span className="rounded-rull rounded-full bg-green-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-green-50">
+          <span className="rounded-rull ho rounded-full bg-green-600 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-green-50">
             {status} order
           </span>
         </div>

@@ -6,11 +6,11 @@ function Button({ children, disabled, to, type, onClick }) {
     "inline-block text-sm rounded-full bg-customOrange font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-customOrange focus:outline-none focus:ring focus:ring-orange-300 focus:ring-offset-2 disabled:cursor-not-allowed";
 
   const styles = {
-    primary: base + " px-4 py-3 sm:px-6 sm:py-4",
-    small: base + " px-4 py-2 md:px-5 md:py-2.5 text-xs",
+    primary: base + " px-4 py-3 sm:px-6 sm:py-4 hover:bg-orange-500",
+    small: base + " px-4 py-2 md:px-5 md:py-2.5 text-xs hover:bg-orange-500",
     round:
       base +
-      " px-2.5 py-1 md:px-3.5 md:py-2 active:scale-95 active:shadow-inner active:translate-y-0.5 active:shadow-lg active:shadow-gray-600 focus:ring-0 focus:ring-offset-0 transition-shadow duration-100",
+      " px-2.5 py-1 md:px-3.5 md:py-2 active:scale-95 active:shadow-inner active:translate-y-0.5 active:shadow-lg active:shadow-gray-600 focus:ring-0 focus:ring-offset-0 transition-shadow duration-100 hover:bg-orange-500",
     secondary:
       "inline-block text-sm rounded-full border-2 border-stone-300 px-4 py-3 font-semibold uppercase tracking-wide text-stone-400 transition-colors duration-300 hover:bg-stone-300 hover:text-stone-800 focus:bg-stone-300 focus:text-stone-800 focus:outline-none focus:ring focus:ring-stone-200 focus:ring-offset-2 disabled:cursor-not-allowed sm:px-6 sm:py-4 px-4 py-2.5 sm:px-6 sm:py-3.5",
   };
