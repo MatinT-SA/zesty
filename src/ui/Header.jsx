@@ -12,7 +12,7 @@ function Header() {
       >
         <img
           alt="logo"
-          src={`${process.env.PUBLIC_URL}/images/logo-tp.png`}
+          src={`${process.env.PUBLIC_URL}/zesty/images/logo-tp.png`}
           className="lg:h-13 2xl:h-15 h-9 max-w-full sm:h-11 md:h-12 xl:h-14"
         />{" "}
         Zesty Co.
