@@ -22,7 +22,7 @@ function Home() {
         </Button>
       )}
 
-      <div className="pizza mt-1 flex h-[18rem] items-center justify-center sm:h-[29rem]">
+      <div className="pizza flex h-[18rem] items-center justify-center sm:h-[28rem]">
         <PizzaScene />
       </div>
     </div>
