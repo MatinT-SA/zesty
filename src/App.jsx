@@ -18,7 +18,7 @@ const router = createBrowserRouter([
 
     children: [
       {
-        path: "/zesty/",
+        path: "/",
         element: <Home />,
         errorElement: <Error />,
       },
