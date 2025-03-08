@@ -6,6 +6,7 @@ import CartItem from "./CartItem";
 import { getUsername } from "../user/userSlice";
 import { clearCart, getCart } from "./cartSlice";
 import EmptyCart from "./EmptyCart";
+import { getBasePath } from "../../utils/config";
 
 function Cart() {
   const dispatch = useDispatch();
@@ -16,11 +17,13 @@ function Cart() {
     dispatch(clearCart());
   }
 
+  const basePath = getBasePath();
+
   if (!cart.length) return <EmptyCart />;
 
   return (
     <div className="px-3 py-4">
-      <LinkButton to="/menu">
+      <LinkButton to={`${basePath}/menu`}>
         <ChevronsLeft className="h-6 w-6 text-blue-500" /> Back to menu
       </LinkButton>
 
@@ -33,7 +36,7 @@ function Cart() {
       </ul>
 
       <div className="mt-6 space-x-2">
-        <Button to="/order/new" type="primary">
+        <Button to={`${basePath}/order/new`} type="primary">
           Order Pizza
         </Button>
         <Button type="secondary" onClick={handleClearCart}>

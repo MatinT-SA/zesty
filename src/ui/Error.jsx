@@ -1,8 +1,10 @@
 import { useRouteError } from "react-router-dom";
 import LinkButton from "./LinkButton";
+import { getBasePath } from "../utils/config";
 
 function Error() {
   const error = useRouteError();
+  const basePath = getBasePath();
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-stone-200 p-10 text-center">
@@ -17,7 +19,7 @@ function Error() {
       </p>
 
       <LinkButton
-        to="/"
+        to={`${basePath}/`}
         className="mt-6 rounded-lg bg-red-500 px-6 py-3 text-lg font-semibold tracking-wide text-stone-100 shadow-md transition-all duration-300 hover:scale-105 hover:bg-red-600 hover:text-stone-200"
       >
         ⬅️ Go Home
