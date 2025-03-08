@@ -11,6 +11,8 @@ import CreateOrder, {
 } from "./features/order/CreateOrder";
 import AppLayout from "./ui/AppLayout";
 
+const basePath = process.env.NODE_ENV === "production" ? "/zesty" : "";
+
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -18,29 +20,29 @@ const router = createBrowserRouter([
 
     children: [
       {
-        path: "/",
+        path: `${basePath}/`,
         element: <Home />,
         errorElement: <Error />,
       },
       {
-        path: "/menu",
+        path: `${basePath}/menu`,
         element: <Menu />,
         loader: menuLoader,
         errorElement: <Error />,
       },
       {
-        path: "/cart",
+        path: `${basePath}/cart`,
         element: <Cart />,
       },
       {
-        path: "/order/:orderId",
+        path: `${basePath}/order/:orderId`,
         element: <Order />,
         loader: orderLoader,
         errorElement: <Error />,
         action: updateOrderAction,
       },
       {
-        path: "/order/new",
+        path: `${basePath}/order/new`,
         element: <CreateOrder />,
         action: actionCreateOrder,
       },
@@ -53,5 +55,5 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} basename="/zesty" />;
+  return <RouterProvider router={router} basename={basePath} />;
 }
