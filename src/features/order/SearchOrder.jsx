@@ -19,7 +19,7 @@ function SearchOrder() {
         placeholder="Search order ID"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="w-28 rounded-full bg-orange-300 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 hover:bg-orange-200 focus:outline-none focus:ring focus:ring-orange-500 focus:ring-opacity-50 sm:w-64 sm:focus:w-72 md:w-72 lg:w-80 xl:w-96 2xl:w-[30rem]"
+        className="w-28 rounded-full bg-orange-300 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 hover:bg-orange-200 focus:outline-none focus:ring focus:ring-orange-500 focus:ring-opacity-50 sm:w-64 sm:focus:w-72 md:w-72 md:focus:w-80 lg:w-80 lg:focus:w-96 xl:w-96 xl:focus:w-[25rem] 2xl:w-[30rem] 2xl:focus:w-[31rem]"
       />
     </form>
   );
