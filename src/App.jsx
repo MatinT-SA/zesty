@@ -20,6 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/zesty/",
         element: <Home />,
+        errorElement: <Error />,
       },
       {
         path: "/menu",
