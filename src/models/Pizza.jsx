@@ -3,7 +3,9 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 function Pizza(props) {
-  const { nodes, materials } = useGLTF("/3d/pizza.glb");
+  const { nodes, materials } = useGLTF(
+    `${process.env.PUBLIC_URL}/3d/pizza.glb`,
+  );
   const pizzaRef = useRef();
 
   useFrame(() => {
@@ -26,6 +28,6 @@ function Pizza(props) {
   );
 }
 
-useGLTF.preload("/3d/pizza.glb");
+useGLTF.preload(`${process.env.PUBLIC_URL}/3d/pizza.glb`);
 
 export default Pizza;
