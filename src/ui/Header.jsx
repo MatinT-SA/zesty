@@ -4,12 +4,6 @@ import SearchOrder from "../features/order/SearchOrder";
 import Username from "../features/user/Username";
 
 function Header() {
-  // Dynamic path for logo based on the environment
-  const logoPath =
-    process.env.NODE_ENV === "production"
-      ? "/zesty/images/logo-tp.png"
-      : "/images/logo-tp.png";
-
   return (
     <header className="flex items-center justify-between border-b border-stone-200 bg-customOrange px-4 py-3 uppercase sm:px-6">
       <Link
@@ -18,7 +12,7 @@ function Header() {
       >
         <img
           alt="logo"
-          src={logoPath} // Use the dynamic logo path
+          src="/images/logo-tp.png"
           className="lg:h-13 2xl:h-15 h-9 max-w-full sm:h-11 md:h-12 xl:h-14"
         />
         Zesty Co.
