@@ -15,11 +15,11 @@ const router = createBrowserRouter([
   {
     element: <AppLayout />,
     errorElement: <Error />,
+
     children: [
       {
-        path: "/",
+        path: "/zesty/",
         element: <Home />,
-        errorElement: <Error />,
       },
       {
         path: "/menu",
@@ -52,6 +52,5 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  const basename = process.env.NODE_ENV === "production" ? "/zesty" : "/";
-  return <RouterProvider router={router} basename={basename} />;
+  return <RouterProvider router={router} basename="/zesty" />;
 }

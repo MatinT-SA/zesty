@@ -3,15 +3,12 @@ import { Link } from "react-router-dom";
 import { Utensils } from "lucide-react";
 import { getTotalCartPrice, getTotalCartQuantity } from "./cartSlice";
 import { formatCurrency } from "../../utils/helpers";
-import { getBasePath } from "../../utils/config";
 
 function CartOverview() {
   const totalCartQuantity = useSelector(getTotalCartQuantity);
   const totalCartPrice = useSelector(getTotalCartPrice);
 
   if (!totalCartQuantity) return null;
-
-  const basePath = getBasePath();
 
   return (
     <div className="flex items-center justify-between bg-stone-800 px-4 py-4 text-sm uppercase text-stone-200 sm:px-6 md:text-base">
@@ -24,7 +21,7 @@ function CartOverview() {
         </span>
       </p>
       <Link
-        to={`${basePath}/cart`}
+        to="/cart"
         className="flex items-center justify-center gap-2 transition-colors duration-200 hover:text-customOrange"
       >
         Open cart <Utensils className="h-6 w-6 text-stone-300" />

@@ -1,15 +1,12 @@
 import { ChevronsLeft, Donut } from "lucide-react";
 import LinkButton from "../../ui/LinkButton";
 import PizzaScene from "../../ui/PizzaScene";
-import { getBasePath } from "../../utils/config";
 
 function EmptyCart() {
-  const basePath = getBasePath();
-
   return (
     <div className="rounded-lg px-6 py-6 text-center">
       <LinkButton
-        to={`${basePath}/menu`}
+        to="/menu"
         className="mb-4 flex items-center justify-center gap-2 transition-colors duration-300 hover:bg-blue-200 hover:text-blue-600"
       >
         <ChevronsLeft className="h-6 w-6 text-blue-500" /> Back to Menu

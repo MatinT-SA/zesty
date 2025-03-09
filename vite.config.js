@@ -6,6 +6,13 @@ export default defineConfig({
   plugins: [react(), eslint()],
   base: process.env.NODE_ENV === "production" ? "/zesty/" : "/",
   server: {
-    historyApiFallback: true,
+    host: true,
+    port: 5173,
+  },
+  build: {
+    outDir: "dist",
+  },
+  preview: {
+    port: 4173,
   },
 });

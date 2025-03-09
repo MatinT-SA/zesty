@@ -3,10 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 function Pizza(props) {
-  const isProduction = window.location.hostname === "matint-sa.github.io";
-  const { nodes, materials } = useGLTF(
-    isProduction ? "/zesty/3d/pizza.glb" : "/3d/pizza.glb",
-  );
+  const { nodes, materials } = useGLTF("/zesty/3d/pizza.glb");
   const pizzaRef = useRef();
 
   useFrame(() => {
