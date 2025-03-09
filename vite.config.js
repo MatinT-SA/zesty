@@ -4,5 +4,5 @@ import eslint from "vite-plugin-eslint";
 
 export default defineConfig(({ mode }) => ({
   plugins: [react(), eslint()],
-  base: mode === "production" ? "/zesty/" : "/",
+  base: "/",
 }));

@@ -52,6 +52,5 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  const basename = import.meta.env.MODE === "production" ? "/zesty" : "/";
-  return <RouterProvider router={router} basename={basename} />;
+  return <RouterProvider router={router} />;
 }
