@@ -17,7 +17,7 @@ function Error() {
       </p>
 
       <LinkButton
-        to="/zesty/"
+        to="/"
         className="mt-6 rounded-lg bg-red-500 px-6 py-3 text-lg font-semibold tracking-wide text-stone-100 shadow-md transition-all duration-300 hover:scale-105 hover:bg-red-600 hover:text-stone-200"
       >
         ⬅️ Go Home

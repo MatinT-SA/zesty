@@ -1,3 +1,5 @@
+// Test ID: IIDSAT
+
 import { useFetcher, useLoaderData } from "react-router-dom";
 import { Sparkles, Timer, Zap } from "lucide-react";
 import { getOrder } from "../../services/apiRestaurant";
@@ -12,6 +14,7 @@ import UpdateOrder from "./UpdateOrder";
 
 function Order() {
   const order = useLoaderData();
+
   const fetcher = useFetcher();
 
   useEffect(() => {
@@ -35,6 +38,7 @@ function Order() {
         <h2 className="text-xl font-semibold">
           Order # <span className="text-customOrange">{id}</span>
         </h2>
+
         <div className="flex items-center justify-center space-x-2">
           {priority && (
             <span className="rounded-rull flex items-center justify-center gap-2 rounded-full bg-red-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-red-50">

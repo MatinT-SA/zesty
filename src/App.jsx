@@ -18,7 +18,7 @@ const router = createBrowserRouter([
 
     children: [
       {
-        path: "/zesty/",
+        path: "/",
         element: <Home />,
       },
       {
@@ -52,5 +52,6 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} basename="/zesty" />;
+  const basename = import.meta.env.PROD ? "/zesty" : "/";
+  return <RouterProvider router={router} basename={basename} />;
 }

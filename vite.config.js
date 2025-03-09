@@ -4,7 +4,7 @@ import eslint from "vite-plugin-eslint";
 
 export default defineConfig({
   plugins: [react(), eslint()],
-  base: "/zesty/",
+  base: process.env.NODE_ENV === "production" ? "/zesty/" : "/",
   server: {
     historyApiFallback: true,
   },
