@@ -42,10 +42,11 @@ function CreateOrder() {
         Your next order is just a click away!
       </h2>
 
-      <Form method="POST">
+      <Form method="POST" autoComplete="off">
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Your Name</label>
           <input
+            autoComplete="new-password"
             type="text"
             name="customer"
             defaultValue={username}
@@ -57,7 +58,13 @@ function CreateOrder() {
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Phone Number</label>
           <div className="grow">
-            <input type="tel" name="phone" required className="input w-full" />
+            <input
+              type="tel"
+              name="phone"
+              required
+              className="input w-full"
+              autoComplete="new-password"
+            />
             {formErrors?.phone && (
               <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
                 {formErrors.phone}
@@ -70,6 +77,7 @@ function CreateOrder() {
           <label className="sm:basis-40">Address</label>
           <div className="grow">
             <input
+              autoComplete="new-password"
               type="text"
               name="address"
               required
