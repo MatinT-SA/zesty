@@ -1,5 +1,7 @@
 # ZESTY
 
+![zesty](https://github.com/user-attachments/assets/68651a98-f59b-49bf-9019-b1206636014c)
+
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
