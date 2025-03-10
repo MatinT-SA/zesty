@@ -66,7 +66,9 @@ Contributions are welcome! To contribute:
 4. **Push to your branch** (`git push origin feature-branch`).
 5. **Open a Pull Request**.
 
-6. Note: If you have API issues, please connect to a VPN as some services may be restricted in certain regions.
+---
+
+Note: If you have API issues, please connect to a VPN as some services may be restricted in certain regions.
 
 Enjoy using **Zesty** and happy coding! 🚀
 
